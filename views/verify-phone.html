@@ -1,0 +1,115 @@
+<script type="text/javascript">
+if (localStorage.getItem('ChatApp')) {
+    location.assign('/')
+}
+</script>
+<!DOCTYPE html>
+<html lang="en">
+<!-- Mirrored from xpanthersolutions.com/admin-templates/gappa/html/dark/login.html by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 21 Dec 2019 14:14:41 GMT -->
+
+<head>
+    @include('meta')
+    <title>Gappa | Verify</title>
+    <!-- Start css -->
+    <link href="/assets/css/bootstrap.min.css" rel="stylesheet" type="text/css">
+    <link href="/assets/css/icons.css" rel="stylesheet" type="text/css">
+    <link href="/assets/css/style.css" rel="stylesheet" type="text/css">
+    <!-- End css -->
+    @include('manifest')
+
+    <script type="text/javascript" src="/assets/cleave.js/cleave.min.js"></script>
+    <script type="text/javascript" src="/assets/cleave.js/addons/cleave-phone.i18n.js"></script>
+    <style type="text/css">
+        #code{
+            font-size: 3em;
+            text-align: center;
+        }
+    </style>
+</head>
+
+<body class="vertical-layout">
+    <!-- Start Containerbar -->
+    <div id="containerbar" class="containerbar authenticate-bg">
+        <!-- Start Container -->
+        <div class="container">
+            <div class="auth-box login-box">
+                <!-- Start row -->
+                <div class="row no-gutters align-items-center justify-content-center">
+                    <!-- Start col -->
+                    <div class="col-md-6 col-lg-5">
+                        <!-- Start Auth Box -->
+                        <div class="auth-box-right">
+                            <div class="card">
+                                <div class="card-body">
+                                    <form action="#">
+                                        <div class="form-head">
+                                            <a href="index.html" class="logo"><img src="/assets/images/logo.svg" class="img-fluid" alt="logo"></a>
+                                        </div>
+                                        <h4 class="text-primary my-4">Enter Code !</h4>
+                                        <div class="form-group">
+                                            <input type="text" class="form-control" id="code" placeholder="Code" required autocomplete="off">
+                                            <input type="hidden" value="{{ $code }}" id="ans">
+                                        </div>
+                                        <div class="form-row mb-3">
+                                            <div class="col-sm-6">
+                                                <div class="custom-control custom-checkbox text-left">
+                                                    <a id="change-phone" href="/setup" class="font-14">Change phone number</a>
+                                                </div>
+                                            </div>
+                                            <div class="col-sm-6">
+                                                <div class="resend-code">
+                                                    Not seen? <a id="resend-code" href="" class="font-14">Resend SMS</a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- End Auth Box -->
+                    </div>
+                    <!-- End col -->
+                </div>
+                <!-- End row -->
+            </div>
+        </div>
+        <!-- End Container -->
+    </div>
+    <!-- End Containerbar -->
+    <!-- Start JS -->
+    <script src="/assets/js/jquery.min.js"></script>
+    <script src="/assets/js/popper.min.js"></script>
+    <script src="/assets/js/bootstrap.min.js"></script>
+    <script src="/assets/js/modernizr.min.js"></script>
+    <script src="/assets/js/detect.js"></script>
+    <script src="/assets/js/jquery.slimscroll.js"></script>
+    <!-- End JS -->
+</body>
+<!-- Mirrored from xpanthersolutions.com/admin-templates/gappa/html/dark/login.html by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 21 Dec 2019 14:15:13 GMT -->
+
+</html>
+<script type="text/javascript">
+var cleave = new Cleave('#code', {
+    prefix: 'C-',
+    delimiter: ' ',
+    blocks: [2, 3, 2],
+    numericOnly: true
+});
+alert('{{ $code }}')
+
+document.querySelector('form').onsubmit = (e) => {
+    e.preventDefault()
+}
+
+document.querySelector('#code').onkeyup = (e) => {
+    if (e.target.value.replace(/\s/g,'') == document.querySelector('#ans').value) {
+        phone = location.search.split('?')[1].match(/%2B234\+\d{3}\+\d{3}\+\d{4}/)[0].replace(/\+/g,'').replace('%2B','+')
+        data = { phone }
+        data = JSON.stringify(data)
+        localStorage.setItem('ChatApp',data)
+        // location.assign(`/chat?phone=${phone}`)
+        document.querySelector('#code').setAttribute('disabled','')
+        document.querySelector('h4').innerHTML = 'Verified !'
+    }
+}
+</script>

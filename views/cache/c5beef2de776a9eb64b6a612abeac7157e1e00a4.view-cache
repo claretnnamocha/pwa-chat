@@ -1,0 +1,25 @@
+<link rel="manifest" href="/manifest.json">
+
+<!-- Support for iOS -->
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black">
+<meta name="apple-mobile-web-app-title" content="GappaChat">
+<link rel="appple-touch-icon" type="text/css" href="/assets/images/icons/apple-icon-57x57.png" sizes="57x57">
+<link rel="appple-touch-icon" type="text/css" href="/assets/images/icons/apple-icon-60x60.png" sizes="60x60">
+<link rel="appple-touch-icon" type="text/css" href="/assets/images/icons/apple-icon-72x72.png" sizes="72x72">
+<link rel="appple-touch-icon" type="text/css" href="/assets/images/icons/apple-icon-76x76.png" sizes="76x76">
+<link rel="appple-touch-icon" type="text/css" href="/assets/images/icons/apple-icon-114x114.png" sizes="114x114">
+<link rel="appple-touch-icon" type="text/css" href="/assets/images/icons/apple-icon-120x120.png" sizes="120x120">
+<link rel="appple-touch-icon" type="text/css" href="/assets/images/icons/apple-icon-144x144.png" sizes="144x144">
+<link rel="appple-touch-icon" type="text/css" href="/assets/images/icons/apple-icon-152x152.png" sizes="152x152">
+<link rel="appple-touch-icon" type="text/css" href="/assets/images/icons/apple-icon-180x180.png" sizes="180x180">
+
+<!-- Support for Windows -->
+<meta content="msapplication-TileImage" content="/assets/images/icons/icon-144x144.png">
+<meta content="msapplication-TileColor" content="#262b2e">
+
+<!-- Theme Color Fallback -->
+<meta name="theme-color" content="#19a299">
+
+<!-- Entry Point JS -->
+<script src="/assets/js/app.js"></script>

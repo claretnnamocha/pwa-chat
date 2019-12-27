@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<!-- Mirrored from xpanthersolutions.com/admin-templates/gappa/html/dark/login.html by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 21 Dec 2019 14:14:41 GMT -->
+
+<head>
+ <meta charset="UTF-8">
+ <meta http-equiv="X-UA-Compatible" content="IE=edge">
+ <meta name="description" content="Orbiter is a bootstrap minimal & clean admin template">
+ <meta name="keywords" content="chat, chat platform, discussion, video call, voice call, communication, conversation, messange, messanger, talk">
+ <meta name="author" content="Themesbox">
+ <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0, minimal-ui">
+ <title>Orbiter - Bootstrap Minimal & Clean Admin Template</title>
+ <!-- Fevicon -->
+ <link rel="shortcut icon" href="/assets/images/favicon.ico">
+ <!-- Start css -->
+ <link href="/assets/css/bootstrap.min.css" rel="stylesheet" type="text/css">
+ <link href="/assets/css/icons.css" rel="stylesheet" type="text/css">
+ <link href="/assets/css/style.css" rel="stylesheet" type="text/css">
+ <!-- End css -->
+ <?php echo $this->runChild('manifest'); ?>
+</head>
+
+<body class="vertical-layout">
+ <!-- Start Containerbar -->
+ <div id="containerbar" class="containerbar authenticate-bg">
+ <!-- Start Container -->
+ <div class="container">
+ <div class="auth-box login-box">
+ <!-- Start row -->
+ <div class="row no-gutters align-items-center justify-content-center">
+ <!-- Start col -->
+ <div class="col-md-6 col-lg-5">
+ <!-- Start Auth Box -->
+ <div class="auth-box-right">
+ <div class="card">
+ <div class="card-body">
+ <form action="/verify">
+ <div class="form-head">
+ <a href="#" class="logo"><img src="/assets/images/logo.svg" class="img-fluid" alt="logo"></a>
+ </div>
+ <h4 class="text-primary my-4">Error Connecting to the Server !</h4>
+ </form>
+ </div>
+ </div>
+ </div>
+ <!-- End Auth Box -->
+ </div>
+ <!-- End col -->
+ </div>
+ <!-- End row -->
+ </div>
+ <div class="chat-menu" style="background-color: #262b2e;">
+ <ul class="nav nav-pills nav-justified mb-0" id="pills-tab-justified" role="tablist">
+ <li class="nav-item">
+ <a class="nav-link" id="pills-chat-tab-justified" href="/" role="tab" aria-controls="pills-chat-justified" aria-selected="true"><i class="feather icon-home"></i></a>
+ </li>
+ </ul>
+ </div>
+ </div>
+ <!-- End Container -->
+ </div>
+ <!-- End Containerbar -->
+ <!-- Start js -->
+ <script src="/assets/js/jquery.min.js"></script>
+ <script src="/assets/js/popper.min.js"></script>
+ <script src="/assets/js/bootstrap.min.js"></script>
+ <script src="/assets/js/modernizr.min.js"></script>
+ <script src="/assets/js/detect.js"></script>
+ <script src="/assets/js/jquery.slimscroll.js"></script>
+ <!-- End js -->
+</body>
+<!-- Mirrored from xpanthersolutions.com/admin-templates/gappa/html/dark/login.html by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 21 Dec 2019 14:15:13 GMT -->
+
+</html>

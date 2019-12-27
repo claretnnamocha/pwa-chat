@@ -1,0 +1,10 @@
+<!-- Fevicon -->
+<link rel="shortcut icon" href="assets/images/favicon.ico">
+
+<!-- Meta -->
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="description" content="Gappa is a simple chat app with PWA superpowers">
+<meta name="keywords" content="chat, chat platform, discussion, communication, conversation, messenger, pwa">
+<meta name="author" content="Claret Nnamocha">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0, minimal-ui">

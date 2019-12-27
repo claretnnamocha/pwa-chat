@@ -1,0 +1,6 @@
+<script type="text/javascript">
+	localStorage.clear()
+	location.assign('/')
+</script>
+<?php echo $this->runChild('manifest'); ?>
+

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+ <title>Error <?php echo static::e($code); ?> | <?php echo static::e($title); ?></title>
+ <style type="text/css">
+ #main {
+ height: 100vh;
+ }
+ </style>
+</head>
+
+<body>
+ <link href="/assets/error/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+ <script src="/assets/error/bootstrap.min.js"></script>
+ <script src="/assets/error/jquery.min.js"></script>
+ <div class="d-flex flex-column justify-content-center align-items-center" id="main">
+ <div class="d-flex flex-row justify-content-center align-items-center">
+ <h1 class="mr-3 pr-3 align-top border-right inline-block align-content-center"><?php echo static::e($code); ?></h1>
+ <div class="inline-block align-middle">
+ <h2 class="font-weight-normal lead" id="desc"><?php echo static::e($title); ?>.</h2>
+ </div>
+ </div>
+ <?php if(boolval(env('DEBUG'))): ?>
+ <textarea style="resize: none;width: 70%;min-height: 350px;margin: 40px 0 0;display: block;" disabled>
+ <?php echo static::e($error); ?>
+
+ </textarea>
+ <?php endif; ?>
+ </div>
+</body>
+
+</html>

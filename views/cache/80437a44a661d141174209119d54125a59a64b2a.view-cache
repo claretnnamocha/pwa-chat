@@ -1,0 +1,86 @@
+<script type="text/javascript">
+if (localStorage.getItem('ChatApp')) {
+ phone = JSON.parse(localStorage.getItem('ChatApp'))['phone']
+ location.assign(`/chat?phone=${phone}`)
+}
+</script>
+<!DOCTYPE html>
+<html lang="en">
+
+<!-- Mirrored from xpanthersolutions.com/admin-templates/gappa/html/dark/login.html by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 21 Dec 2019 14:14:41 GMT -->
+<head>
+ <?php echo $this->runChild('meta'); ?>
+ <title>Gappa | Setup</title>
+ <!-- Start css -->
+ <link href="/assets/css/bootstrap.min.css" rel="stylesheet" type="text/css">
+ <link href="/assets/css/icons.css" rel="stylesheet" type="text/css">
+ <link href="/assets/css/style.css" rel="stylesheet" type="text/css">
+ <!-- End css -->
+ <?php echo $this->runChild('manifest'); ?>
+
+ <script type="text/javascript" src="/assets/cleave.js/cleave.min.js"></script>
+ <script type="text/javascript" src="/assets/cleave.js/addons/cleave-phone.i18n.js"></script>
+ <style type="text/css">
+ #phone{
+ font-size: 1.5em;
+ text-align: center;
+ }
+ </style>
+</head>
+<body class="vertical-layout">
+ <!-- Start Containerbar -->
+ <div id="containerbar" class="containerbar authenticate-bg">
+ <!-- Start Container -->
+ <div class="container">
+ <div class="auth-box login-box">
+ <!-- Start row -->
+ <div class="row no-gutters align-items-center justify-content-center">
+ <!-- Start col -->
+ <div class="col-md-6 col-lg-5">
+ <!-- Start Auth Box -->
+ <div class="auth-box-right">
+ <div class="card">
+ <div class="card-body">
+ <form action="/verify">
+ <div class="form-head">
+ <a href="#" class="logo"><img src="/assets/images/logo.svg" class="img-fluid" alt="logo"></a>
+ </div>                                        
+ <h4 class="text-primary my-4">Account Setup !</h4>
+ <div class="form-group">
+ <input type="text" class="form-control" id="phone" name="phone" placeholder="Phone" pattern="\+234\s\d{3}\s\d{3}\s\d{4}" title="+234 XXX XXX XXXX" required autocomplete="off">
+ </div>                       
+ <button class="btn btn-success btn-lg btn-block font-18">Verify Phone</button>
+ </form>
+ </div>
+ </div>
+ </div>
+ <!-- End Auth Box -->
+ </div>
+ <!-- End col -->
+ </div>
+ <!-- End row -->
+ </div>
+ </div>
+ <!-- End Container -->
+ </div>
+ <!-- End Containerbar -->
+ <!-- Start js -->        
+ <script src="/assets/js/jquery.min.js"></script>
+ <script src="/assets/js/popper.min.js"></script>
+ <script src="/assets/js/bootstrap.min.js"></script>
+ <script src="/assets/js/modernizr.min.js"></script>
+ <script src="/assets/js/detect.js"></script>
+ <script src="/assets/js/jquery.slimscroll.js"></script>
+ <!-- End js -->
+</body>
+
+<!-- Mirrored from xpanthersolutions.com/admin-templates/gappa/html/dark/login.html by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 21 Dec 2019 14:15:13 GMT -->
+</html>
+
+<script type="text/javascript">
+var cleave = new Cleave('#phone', {
+ phone: true,
+ phoneRegionCode: 'NG',
+ prefix: '+234'
+});
+</script>
